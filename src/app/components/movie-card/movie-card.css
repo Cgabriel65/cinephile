@@ -1,0 +1,50 @@
+.movie-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #fffaf0;
+  border: 1px solid #d6cbb8;
+
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.movie-info p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.movie-actions {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.movie-actions button {
+  width: 90px;          
+  text-align: center;
+}
+
+.movieStatus {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  
+}
+
+.watched {
+  background-color: #4b7f52;
+  color: white;
+}
+
+.to-watch {
+  background-color: #b35c1e;
+  color: white;
+}
+

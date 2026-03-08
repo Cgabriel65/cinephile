@@ -1,0 +1,37 @@
+
+<div class="movie-card">
+    <div class="movie-info">
+        <h3>{{ movie.title }}</h3>  <!-- MovieCard (filho) recebe o objeto movie do MovieList (pai) através do @Input() -->
+        <p><strong>Genre:</strong> {{movie.genre }}</p>
+        <p><strong>Director:</strong> {{movie.director }}</p>
+        <p><strong>Score:</strong> {{movie.score }}</p>
+         @if (showFull) {
+        <p><strong>Runtime:</strong> {{ movie.runtime | minutesToHours }}</p>
+        <p><strong>Release Date:</strong> {{ movie.releaseDate | date}}</p>
+        } 
+        <span
+            class="movieStatus"
+            [ngClass]="{
+                'watched': movie.status === 'watched',
+                'to-watch': movie.status === 'to-watch'
+            }"
+        >
+            {{movie.status}}
+        </span>
+    </div>    
+    @if (!showFull) {
+    
+        <div class="movie-actions">
+            <a [routerLink]="['/movie', movie.id]">
+                <button>Details</button>
+            </a>
+
+            <a [routerLink]="['/movie-form', movie.id]">
+                <button>Edit</button>
+            </a>
+
+            <button (click)="onDelete()">Delete</button>
+
+        </div>
+    }
+</div>

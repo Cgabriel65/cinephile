@@ -1,0 +1,15 @@
+@if (movie) {
+    <div>
+        <h2>{{ movie.title }}</h2>
+        <p><strong>Genre:</strong> {{ movie.genre }}</p>
+        <p><strong>Director:</strong> {{ movie.director }}</p>
+        <p><strong>Score:</strong> {{ movie.score }}</p>
+        <p><strong>Runtime:</strong> {{ movie.runtime | minutesToHours }}</p>
+        <p><strong>State:</strong> {{ movie.status }}</p>
+        <p><strong>Release Date:</strong> {{ movie.releaseDate | date}}</p>
+
+        <a routerLink="/movies">Back to WatchList</a>
+    
+    </div>
+}
+

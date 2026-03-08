@@ -1,0 +1,42 @@
+<h2>Dashboard</h2>
+
+<div class="kpis">
+
+    <div class="kpi-card totalMovies">
+        <h3>Total Movies:</h3>
+        <p>{{ totalMovies }}</p>
+    </div>
+
+    <div class="kpi-card watchedCount"> 
+        <h3>Watched:</h3> 
+        <p>{{ watchedCount }}</p>
+
+    </div>  
+    
+    <div class="kpi-card avgScore">
+        <h3>Average Score:</h3>
+        <p>{{ avgScore }}</p>    
+    </div>
+
+    <div class="kpi-card favDirector">
+        <h3>Favourite Director:</h3>
+        <p>{{ mostWatchedDirector || 'N/A' }}</p>    
+    </div>
+
+    <div class="kpi-card totalWatchTime">
+        <h3>Total Watch Time:</h3>
+        <p>{{ totalWatchTime | minutesToHours }}</p>    
+    </div>
+
+    
+</div>
+
+@if (lastAdded) {
+  <h3>Last Movie Added</h3>
+
+  <app-movie-card
+    [movie]="lastAdded"
+    [showFull]="true"
+    class="dashboard-card">
+  </app-movie-card>
+}
