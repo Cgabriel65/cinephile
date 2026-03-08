@@ -173,7 +173,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 8,
         runtime: 155,
         releaseDate: new Date("2021-10-22"),
-        dateAdded: new Date(),
+        dateAdded: new Date("2021-10-22"),
         status: "watched"
       },
       {
@@ -184,7 +184,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 9,
         runtime: 148,
         releaseDate: new Date("2010-07-16"),
-        dateAdded: new Date(),
+        dateAdded: new Date("2010-07-16"),
         status: "watched"
       },
       {
@@ -195,7 +195,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 10,
         runtime: 169,
         releaseDate: new Date("2014-11-07"),
-        dateAdded: new Date(),
+        dateAdded: new Date("2014-11-07"),
         status: "watched"
       },
       {
@@ -206,7 +206,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 9,
         runtime: 136,
         releaseDate: new Date("1999-03-31"),
-        dateAdded: new Date(),
+        dateAdded: new Date("1999-03-31"),
         status: "watched"
       },
       {
@@ -217,7 +217,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 7,
         runtime: 138,
         releaseDate: new Date("2003-05-15"),
-        dateAdded: new Date(),
+        dateAdded: new Date("2003-05-15"),
         status: "watched"
       },
       {
@@ -228,7 +228,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 6,
         runtime: 129,
         releaseDate: new Date("2003-11-05"),
-        dateAdded: new Date(),
+        dateAdded: new Date("2003-11-05"),
         status: "watched"
       },
       {
@@ -239,7 +239,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 9,
         runtime: 164,
         releaseDate: new Date("2017-10-06"),
-        dateAdded: new Date(),
+        dateAdded: new Date("2017-10-06"),
         status: "to-watch"
       },
       {
@@ -250,7 +250,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 8,
         runtime: 116,
         releaseDate: new Date("2016-11-11"),
-        dateAdded: new Date(),
+        dateAdded: new Date("2016-11-11"),
         status: "watched"
       },
       {
@@ -261,7 +261,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 10,
         runtime: 152,
         releaseDate: new Date("2008-07-18"),
-        dateAdded: new Date(),
+        dateAdded: new Date("2008-07-18"),
         status: "watched"
       },
       {
@@ -272,7 +272,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 10,
         runtime: 154,
         releaseDate: new Date("1994-10-14"),
-        dateAdded: new Date(),
+        dateAdded: new Date("1994-10-14"),
         status: "watched"
       },
       {
@@ -283,7 +283,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 9,
         runtime: 139,
         releaseDate: new Date("1999-10-15"),
-        dateAdded: new Date(),
+        dateAdded: new Date("1999-10-15"),
         status: "to-watch"
       },
       {
@@ -294,7 +294,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 10,
         runtime: 175,
         releaseDate: new Date("1972-03-24"),
-        dateAdded: new Date(),
+        dateAdded: new Date("1972-03-24"),
         status: "watched"
       },
       {
@@ -305,7 +305,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 10,
         runtime: 202,
         releaseDate: new Date("1974-12-20"),
-        dateAdded: new Date(),
+        dateAdded: new Date("1974-12-20"),
         status: "to-watch"
       },
       {
@@ -316,7 +316,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 8,
         runtime: 181,
         releaseDate: new Date("2019-04-26"),
-        dateAdded: new Date(),
+        dateAdded: new Date("2019-04-26"),
         status: "watched"
       },
       {
@@ -327,7 +327,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
         score: 10,
         runtime: 132,
         releaseDate: new Date("2019-05-30"),
-        dateAdded: new Date(),
+        dateAdded: new Date("2019-05-30"),
         status: "to-watch"
       }
     ];
