@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arvo", "Times New Roman", serif;
+  background-color: #f5f1e6;
+  color: #3e2f23;
+  font-weight: 400;
+  
+}
+
+p, span, label, input, select {
+  font-size: 16px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: "Bungee";
+}
+
+h3 {
+  margin-bottom: 6px;
+  font-family: "Bungee";
+  font-weight: 400;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #7b3f00;
+  color: #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5e2f00;
+}
+
+input,
+select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #c8bca8;
+  font-family: inherit;
+}
+
+ main {
+  padding: 25px;
+  margin: 0 auto;
+  max-width: 1200px;
+  
+  
+} 

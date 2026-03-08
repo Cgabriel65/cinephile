@@ -1,0 +1,72 @@
+<h2>{{ editMode ? 'Edit Movie' : 'Add Movie'}}</h2>
+
+<form [formGroup] = "form"> 
+    <div class="form-control">
+        <label>Title *</label>
+        <input type="text" formControlName="movieTitle">
+
+        @if (form.controls.movieTitle.invalid && form.controls.movieTitle.touched) {
+            <p class="error">Title is required</p>
+        }
+
+    </div>
+
+    <div class="form-control">
+        <label>Genre *</label>
+        <input type="text" formControlName="movieGenre">
+
+        @if (form.controls.movieGenre.invalid && form.controls.movieGenre.touched) {
+            <p class="error">Genre is required</p>
+        }
+    </div>
+
+    <div class="form-control">
+        <label>Director *</label>
+        <input type="text" formControlName="movieDirector">
+
+        @if (form.controls.movieDirector.invalid && form.controls.movieDirector.touched) {
+            <p class="error">Director is required</p>
+        }
+    </div>
+
+    <div class="form-control">
+        <label>Score (0-10)</label>
+        <input type="number" formControlName="movieScore">
+
+        @if (form.controls.movieScore.invalid && form.controls.movieScore.touched) {
+            <p class="error">Score must be between 0 and 10</p>
+        }
+    </div>
+
+    <div class="form-control">
+        <label>Runtime(minutes)</label>
+        <input type="number" formControlName="movieRuntime">
+
+        @if (form.controls.movieRuntime.invalid && form.controls.movieRuntime.touched) {
+            <p class="error">Runtime must be at least 1 minute</p>
+        }
+    </div>
+
+    <div class="form-control">
+        <label>Release Date</label>
+        <input type="date" formControlName="movieRelease">
+
+        @if (form.controls.movieRelease.invalid && form.controls.movieRelease.touched) {
+            <p class="error">Release date is required</p>
+        }
+    </div>
+
+    <div class="form-control">
+        <label>Status *</label>
+        <select formControlName="movieStatus">
+            <option value="watched">Watched</option>
+            <option value="to-watch">To Watch</option>
+        </select>
+    </div>
+
+    <button type="submit" (click)="onSubmit()" [disabled]="form.invalid">Add Movie</button>
+</form>
+
+
+
+   

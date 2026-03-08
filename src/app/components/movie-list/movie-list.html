@@ -1,0 +1,28 @@
+<h2>Movie WatchList</h2>
+
+<div class="filters">
+    <input type="text" placeholder="Search movies..." (input)="search = $event.target.value; filterMovies()"/>
+
+
+    <button (click)="setFilter('all')">All</button>
+    <button (click)="setFilter('watched')">Watched</button>
+    <button (click)="setFilter('to-watch')">To-Watch</button>
+  
+    
+</div>
+
+<div class="movieListContainer">
+
+   
+
+    <div class="movieList">
+        @for (movie of filteredMovies; track movie.id) {
+            <app-movie-card
+              [movie]="movie"
+              (delete)="deleteMovie($event)">
+            </app-movie-card>
+        }
+    </div>
+
+</div>
+            
