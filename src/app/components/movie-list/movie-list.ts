@@ -17,6 +17,7 @@ export class MovieList implements OnInit {
   filteredMovies: Movie[] = [];
   filter: "all" | "watched" | "to-watch" = "all";
   search: string = '';
+  sortOption: 'dateAddedDesc' | 'dateAddedAsc' = 'dateAddedDesc';
 
   constructor(private movieService: MovieService) {}
 
@@ -50,7 +51,8 @@ export class MovieList implements OnInit {
     } else {
       this.filteredMovies = this.movies.filter(movie => movie.status === this.filter);
       
-    };    
+    }; 
+    this.applySorting(); 
 
   }; 
 
@@ -59,6 +61,25 @@ export class MovieList implements OnInit {
     this.filterMovies();
 
   };
+
+  onSortChange(option: string): void {
+    if (option === 'dateAddedDesc' || option === 'dateAddedAsc') {
+      this.sortOption = option;
+      this.applySorting();
+    }
+  }
+
+
+  applySorting(): void {
+    if (!this.filteredMovies) return;
+
+    if (this.sortOption === 'dateAddedDesc') {
+      this.filteredMovies.sort((a, b) => b.dateAdded.getTime() - a.dateAdded.getTime());
+    } else {
+      this.filteredMovies.sort((a, b) => a.dateAdded.getTime() - b.dateAdded.getTime());
+    }
+  }
+
 
   
 

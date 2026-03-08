@@ -21,7 +21,7 @@ export class MovieForm implements OnInit {
     movieDirector: new FormControl ("", [Validators.required]),
     movieScore: new FormControl<number | null>(null, [Validators.min(0), Validators.max(10)]),
     movieRuntime: new FormControl<number | null>(null, [Validators.min(0)]),
-    movieRelease: new FormControl<Date | null>(null, [Validators.required]),
+    movieRelease: new FormControl<Date | null>(null),
     movieStatus: new FormControl("to-watch", [Validators.required])
     
   });
@@ -55,6 +55,7 @@ export class MovieForm implements OnInit {
         });
       }        
     }
+    
   }
 
   onSubmit(): void {

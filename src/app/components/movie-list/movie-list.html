@@ -7,6 +7,12 @@
     <button (click)="setFilter('all')">All</button>
     <button (click)="setFilter('watched')">Watched</button>
     <button (click)="setFilter('to-watch')">To-Watch</button>
+
+    <label for="sort">Sort by:</label>
+    <select id="sort" #sortSelect (change)="onSortChange(sortSelect.value)">
+        <option value="dateAddedDesc">Newest</option>
+        <option value="dateAddedAsc">Oldest</option>
+    </select>
   
     
 </div>
