@@ -120,10 +120,10 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
       return undefined;
     } 
     
-    const directorCounter: {[key: string]: number} = {} //ex: {Tarantino: 2, Villeneuve: 5,....}
+    const directorCounter: Record<string, number> = {} //ex: {Tarantino: 2, Villeneuve: 5,....}
     //alternativa: const directorCounter: Record<string, number> = {}
 
-    for (let movie of watchedMovies) {
+    for (const movie of watchedMovies) {
       directorCounter[movie.director] = (directorCounter[movie.director] || 0) + 1; 
 
     }
@@ -132,7 +132,7 @@ export class MovieService {    //Responsabilidade deste service: gerir a entidad
     let max = 0;
 
 
-    for (let director in directorCounter) {
+    for (const director in directorCounter) {
         if (directorCounter[director] > max) {
           maxDirector = director;
           max = directorCounter[director];

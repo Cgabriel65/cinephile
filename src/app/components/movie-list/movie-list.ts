@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MovieService } from '../../services/movie-service';
 import { Movie } from '../../models/movie.model';
 import { CommonModule } from '@angular/common';
 import { MovieCard } from '../movie-card/movie-card';
-
 
 @Component({
   selector: 'app-movie-list',
@@ -12,55 +11,50 @@ import { MovieCard } from '../movie-card/movie-card';
   styleUrl: './movie-list.css',
 })
 export class MovieList implements OnInit {
+  private movieService = inject(MovieService);
 
   movies: Movie[] = [];
   filteredMovies: Movie[] = [];
-  filter: "all" | "watched" | "to-watch" = "all";
-  search: string = '';
+  filter: 'all' | 'watched' | 'to-watch' = 'all';
+  search = '';
   sortOption: 'dateAddedDesc' | 'dateAddedAsc' = 'dateAddedDesc';
-
-  constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
     this.loadMovies();
-  };
+  }
 
   loadMovies(): void {
     this.movies = this.movieService.getAllMovies();
     this.filterMovies();
-  };
+  }
 
-  deleteMovie (id: number): void {
+  deleteMovie(id: number): void {
     this.movieService.deleteMovie(id);
     this.loadMovies();
-    
-  };  
+  }
 
   filterMovies(): void {
-     const searchMovie = this.search.toLowerCase();
+    const searchMovie = this.search.toLowerCase();
 
     if (searchMovie) {
-      this.filteredMovies = this.movies.filter(movie => movie.title.toLowerCase().includes(searchMovie));
-    return;
+      this.filteredMovies = this.movies.filter((movie) =>
+        movie.title.toLowerCase().includes(searchMovie),
+      );
+      return;
     }
 
-
-
-    if (this.filter === "all") {
+    if (this.filter === 'all') {
       this.filteredMovies = [...this.movies];
     } else {
-      this.filteredMovies = this.movies.filter(movie => movie.status === this.filter);
-      
-    }; 
-    this.applySorting(); 
+      this.filteredMovies = this.movies.filter((movie) => movie.status === this.filter);
+    }
+    this.applySorting();
+  }
 
-  }; 
-
-  setFilter(filter: "all" | "watched" | "to-watch"): void {
+  setFilter(filter: 'all' | 'watched' | 'to-watch'): void {
     this.filter = filter;
     this.filterMovies();
-
-  };
+  }
 
   onSortChange(option: string): void {
     if (option === 'dateAddedDesc' || option === 'dateAddedAsc') {
@@ -68,7 +62,6 @@ export class MovieList implements OnInit {
       this.applySorting();
     }
   }
-
 
   applySorting(): void {
     if (!this.filteredMovies) return;
@@ -79,8 +72,4 @@ export class MovieList implements OnInit {
       this.filteredMovies.sort((a, b) => a.dateAdded.getTime() - b.dateAdded.getTime());
     }
   }
-
-
-  
-
-};
+}

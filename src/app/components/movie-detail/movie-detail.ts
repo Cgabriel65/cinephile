@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MovieService } from '../../services/movie-service';
 import { Movie } from '../../models/movie.model';
@@ -11,17 +11,14 @@ import { MinutesToHoursPipe } from '../../pipes/minutes-to-hours-pipe';
   templateUrl: './movie-detail.html',
   styleUrl: './movie-detail.css',
 })
-export class MovieDetail implements OnInit{
-  movie?: Movie;
+export class MovieDetail implements OnInit {
+  private route = inject(ActivatedRoute);
+  private movieService = inject(MovieService);
 
-  constructor(
-    private route: ActivatedRoute, //serviço interno do angular, já preparado para ser injetado
-    private movieService: MovieService
-  ) {}
+  movie?: Movie;
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.movie = this.movieService.getMovieById(id);
-    
   }
 }

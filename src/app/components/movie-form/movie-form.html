@@ -1,72 +1,71 @@
-<h2>{{ editMode ? 'Edit Movie' : 'Add Movie'}}</h2>
+<h2>{{ editMode ? 'Edit Movie' : 'Add Movie' }}</h2>
 
-<form [formGroup] = "form"> 
-    <div class="form-control">
-        <label>Title *</label>
-        <input type="text" formControlName="movieTitle">
+<form [formGroup]="form">
 
-        @if (form.controls.movieTitle.invalid && form.controls.movieTitle.touched) {
-            <p class="error">Title is required</p>
-        }
+  <div class="form-control">
+    <label for="movieTitle">Title *</label>
+    <input id="movieTitle" type="text" formControlName="movieTitle">
+    <p class="error" 
+       [hidden]="!form.get('movieTitle')?.errors?.['required'] || !form.get('movieTitle')?.touched">
+      Title is required
+    </p>
+  </div>
 
-    </div>
+  <div class="form-control">
+    <label for="movieGenre">Genre *</label>
+    <input id="movieGenre" type="text" formControlName="movieGenre">
+    <p class="error" 
+       [hidden]="!form.get('movieGenre')?.errors?.['required'] || !form.get('movieGenre')?.touched">
+      Genre is required
+    </p>
+  </div>
 
-    <div class="form-control">
-        <label>Genre *</label>
-        <input type="text" formControlName="movieGenre">
+  <div class="form-control">
+    <label for="movieDirector">Director *</label>
+    <input id="movieDirector" type="text" formControlName="movieDirector">
+    <p class="error" 
+       [hidden]="!form.get('movieDirector')?.errors?.['required'] || !form.get('movieDirector')?.touched">
+      Director is required
+    </p>
+  </div>
 
-        @if (form.controls.movieGenre.invalid && form.controls.movieGenre.touched) {
-            <p class="error">Genre is required</p>
-        }
-    </div>
+  <div class="form-control">
+    <label for="movieScore">Score (0-10)</label>
+    <input id="movieScore" type="number" formControlName="movieScore">
+    <p class="error" 
+       [hidden]="!(form.get('movieScore')?.errors?.['min'] || form.get('movieScore')?.errors?.['max'])">
+      Score must be between 0 and 10
+    </p>
+  </div>
 
-    <div class="form-control">
-        <label>Director *</label>
-        <input type="text" formControlName="movieDirector">
+  <div class="form-control">
+    <label for="movieRuntime">Runtime (minutes)</label>
+    <input id="movieRuntime" type="number" formControlName="movieRuntime">
+    <p class="error" 
+       [hidden]="!form.get('movieRuntime')?.errors?.['min']">
+      Runtime must be at least 0 minutes
+    </p>
+  </div>
 
-        @if (form.controls.movieDirector.invalid && form.controls.movieDirector.touched) {
-            <p class="error">Director is required</p>
-        }
-    </div>
+  <div class="form-control">
+    <label for="movieRelease">Release Date</label>
+    <input id="movieRelease" type="date" formControlName="movieRelease">
+    <p class="error" 
+       [hidden]="!form.get('movieRelease')?.errors?.['required'] || !form.get('movieRelease')?.touched">
+      Release date is required
+    </p>
+  </div>
 
-    <div class="form-control">
-        <label>Score (0-10)</label>
-        <input type="number" formControlName="movieScore">
+  <div class="form-control">
+    <label for="movieStatus">Status *</label>
+    <select id="movieStatus" formControlName="movieStatus">
+      <option value="watched">Watched</option>
+      <option value="to-watch">To Watch</option>
+    </select>
+  </div>
 
-        @if (form.controls.movieScore.invalid && form.controls.movieScore.touched) {
-            <p class="error">Score must be between 0 and 10</p>
-        }
-    </div>
+  <button type="submit" (click)="onSubmit()" [disabled]="form.invalid">
+    {{ editMode ? 'Update Movie' : 'Add Movie' }}
+  </button>
 
-    <div class="form-control">
-        <label>Runtime(minutes)</label>
-        <input type="number" formControlName="movieRuntime">
-
-        @if (form.controls.movieRuntime.invalid && form.controls.movieRuntime.touched) {
-            <p class="error">Runtime must be at least 1 minute</p>
-        }
-    </div>
-
-    <div class="form-control">
-        <label>Release Date</label>
-        <input type="date" formControlName="movieRelease">
-
-        @if (form.controls.movieRelease.invalid && form.controls.movieRelease.touched) {
-            <p class="error">Release date is required</p>
-        }
-    </div>
-
-    <div class="form-control">
-        <label>Status *</label>
-        <select formControlName="movieStatus">
-            <option value="watched">Watched</option>
-            <option value="to-watch">To Watch</option>
-        </select>
-    </div>
-
-    <button type="submit" (click)="onSubmit()" [disabled]="form.invalid">Add Movie</button>
 </form>
-
-
-
-   
