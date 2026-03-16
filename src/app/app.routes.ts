@@ -9,6 +9,7 @@ export const routes: Routes = [
     { path: 'movies', component: MovieList}, 
     { path: 'movie-form', component: MovieForm},
     { path: 'movie/:id', component: MovieDetail},
-    { path: 'movie-form/:id', component: MovieForm }
+    { path: 'movie-form/:id', component: MovieForm },
+    
 ];
 

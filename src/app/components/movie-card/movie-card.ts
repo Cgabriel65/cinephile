@@ -15,7 +15,7 @@ export class MovieCard {
   
   @Input() movie!: Movie;
 
-  @Input() showFull: boolean = false;
+  @Input() showFull = false;
 
   @Output() delete = new EventEmitter<number>();
 
