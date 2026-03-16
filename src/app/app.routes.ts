@@ -16,6 +16,7 @@ export const routes: Routes = [
     { path: 'movie-form/:id', component: MovieForm },
     { path: 'auth', component: Auth },
     
+
     
 ];
 
