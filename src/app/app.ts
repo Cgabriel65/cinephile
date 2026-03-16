@@ -2,6 +2,9 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header';
 
+//import { environment } from '../environments/environment.development';
+
+
 
 
 @Component({
@@ -13,3 +16,18 @@ import { Header } from './components/header/header';
 export class App {
   protected readonly title = signal('projeto-final');
 }
+
+
+
+/* async function loadMovies() {
+  const response = await fetch(environment.apiUrl + '/movies');
+  const users = await response.json();
+
+  console.log(users);
+};
+
+loadMovies();
+
+
+ */
+

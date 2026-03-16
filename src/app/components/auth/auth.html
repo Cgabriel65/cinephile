@@ -1,0 +1,63 @@
+<p>auth works!</p>
+<div class="auth-container">
+
+  @if (isLogin) {
+    <h2>Login</h2>
+  } @else {
+    <h2>Registar</h2>
+  }
+
+  <form (ngSubmit)="submit()">
+
+    @if (!isLogin) {
+      <input
+        type="text"
+        placeholder="Nome"
+        [(ngModel)]="user.name"
+        name="name"
+      />
+    }
+
+    <input
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="user.email"
+      name="email"
+      required
+    />
+
+    <input
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="user.password"
+      name="password"
+      required
+    />
+
+    <button type="submit">
+      @if (isLogin) {
+        Entrar
+      } @else {
+        Criar conta
+      }
+    </button>
+
+  </form>
+
+  <p>
+    @if (isLogin) {
+      Não tens conta?
+    } @else {
+      Já tens conta?
+    }
+
+    <button (click)="toggleMode()">
+      @if (isLogin) {
+        Registar
+      } @else {
+        Login
+      }
+    </button>
+  </p>
+
+</div>
