@@ -1,3 +1,5 @@
+[![CI](https://github.com/Cgabriel65/cinephile/actions/workflows/ci.yml/badge.svg?branch=test-ci&event=pull_request)](https://github.com/Cgabriel65/cinephile/actions/workflows/ci.yml)
+
 ## About the Project
 
 Cinephile is a Single Page Application (SPA) for managing movies, allowing:

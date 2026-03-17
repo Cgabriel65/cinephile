@@ -15,3 +15,4 @@ FROM nginx:alpine
 COPY --from=build /app/dist/projeto-final/browser /usr/share/nginx/html
 
 EXPOSE 80
+
