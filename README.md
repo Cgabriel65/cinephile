@@ -8,7 +8,8 @@ Cinephile is a Single Page Application (SPA) for managing movies, allowing:
 - Movie list with filters and search
 - Creation and editing form (Reactive Forms)
 - Movie detail with complete information
-- Data persistence using LocalStorage 
+- Data persistence using LocalStorage and Supabase
+- Runs locally or in a Docker container
 
 ## Technologies Used
 
@@ -16,6 +17,9 @@ Cinephile is a Single Page Application (SPA) for managing movies, allowing:
 - TypeScript
 - HTML & CSS
 - LocalStorage 
+- Docker
+- Supabase
+- Github Actions
 
 ## How to Run the Project
 
@@ -23,7 +27,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Cgabriel65/cinephile.git
-cd projeto-final
+cd cinephile
 ```
 
 Install dependencies
@@ -38,17 +42,21 @@ Start the development server
 ng serve --open
 ```
 
-Features
-- Dashboard with KPIs
-- Movie CRUD (Create, Read, Update, Delete)
-- Filters and search in the list
-- Movie detail page
-- Form with validations
-- Responsive and vintage-style design
+With docker
+```bash
+docker-compose up --build
+```
 
-Project Structure
+## CI/CD
 
-- src/app/components – Angular components (Dashboard, Movie List, Movie Form, Movie Detail, Header, Movie Card)
+GitHub Actions runs on Pull Requests: Pipeline includes:
+- Lint
+- Build
+
+
+## Project Structure
+
+- src/app/components – Angular components (Dashboard, Movie List, Movie Form, Movie Detail, Header, Movie Card, Auth)
 - src/app/services – MovieService (CRUD & KPIs)
 - src/app/models – Movie interface
 - src/app/pipes – Custom pipes (minutesToHours)
