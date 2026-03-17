@@ -12,4 +12,3 @@ export const routes: Routes = [
     { path: 'movie-form/:id', component: MovieForm },
     
 ];
-
