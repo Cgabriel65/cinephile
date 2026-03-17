@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header';
-import { environment } from '../environments/environment.development';
+//import { environment } from '../environments/environment.development';
 
 
 
