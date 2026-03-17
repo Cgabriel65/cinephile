@@ -16,12 +16,12 @@ export class App {
 }
 
 
-async function loadUsers() {
+/* async function loadUsers() {
   const response = await fetch(environment.API_URL + '/users');
   const users = await response.json();
 
   console.log(users);
 }
 
-loadUsers();
+loadUsers(); */
 //teste
