@@ -3,6 +3,9 @@ import { RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header';
 import { environment } from '../environments/environment.development';
 
+//import { environment } from '../environments/environment.development';
+
+
 
 
 @Component({
@@ -16,11 +19,17 @@ export class App {
 }
 
 
-async function loadUsers() {
-  const response = await fetch(environment.API_URL + '/users');
+
+/* async function loadMovies() {
+  const response = await fetch(environment.API_URL + '/movies');
   const users = await response.json();
 
   console.log(users);
-}
+};
 
-loadUsers();
+loadMovies();
+
+
+ */
+
+
