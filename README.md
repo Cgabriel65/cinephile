@@ -44,7 +44,7 @@ ng serve --open
 
 With docker
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 ## CI/CD
