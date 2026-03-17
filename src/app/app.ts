@@ -17,7 +17,7 @@ export class App {
 
 
 async function loadUsers() {
-  const response = await fetch(environment.apiUrl + '/users');
+  const response = await fetch(environment.API_URL + '/users');
   const users = await response.json();
 
   console.log(users);
