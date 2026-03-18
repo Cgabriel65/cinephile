@@ -1,4 +1,4 @@
-[![CI](https://github.com/Cgabriel65/cinephile/actions/workflows/ci.yml/badge.svg?branch=develop-idp)](https://github.com/Cgabriel65/cinephile/actions/workflows/ci.yml)
+[![CI](https://github.com/Cgabriel65/cinephile/actions/workflows/ci.yml/badge.svg?branch=test-ci&event=pull_request)](https://github.com/Cgabriel65/cinephile/actions/workflows/ci.yml)
 
 ## About the Project
 
