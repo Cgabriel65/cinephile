@@ -39,8 +39,8 @@ jobs:
           cat > src/environments/environment.development.ts <<EOF
           export const environment = {
             production: false,
-            supabaseUrl: '${SUPABASE_URL}',
-            supabaseKey: '${SUPABASE_KEY}',
+            SUPABASE_URL: '${SUPABASE_URL}',
+            SUPABASE_ANON_KEY: '${SUPABASE_KEY}',
         
           };
           EOF
