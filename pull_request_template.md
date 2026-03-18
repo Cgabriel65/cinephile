@@ -13,7 +13,6 @@ Fixes # (issue)
 - [ ] Test
 
 ## How Has This Been Tested?
-Describe how you verified your changes, e.g., ran locally, Docker, or CI pipeline.
 
 - [ ] Ran `ng serve` locally
 - [ ] Ran `docker compose up --build`
