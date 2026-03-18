@@ -9,7 +9,7 @@
     "test": "ng test",
     "serve:ssr:projeto-final": "node dist/projeto-final/server/server.mjs",
     "lint": "ng lint",
-    "ci" : "ng lint && ng build"
+    "ci": "ng lint && ng build"
   },
   "private": true,
   "packageManager": "npm@11.6.2",
@@ -22,6 +22,7 @@
     "@angular/platform-server": "^21.2.0",
     "@angular/router": "^21.2.0",
     "@angular/ssr": "^21.2.0",
+    "@supabase/supabase-js": "^2.99.2",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
