@@ -20,6 +20,7 @@ Cinephile is a Single Page Application (SPA) for managing movies, allowing:
 - Docker
 - Supabase
 - Github Actions
+- Vercel
 
 ## How to Run the Project
 
@@ -52,6 +53,11 @@ docker compose up --build
 GitHub Actions runs on Pull Requests: Pipeline includes:
 - Lint
 - Build
+
+Deployment is automated with Vercel:
+
+- Pushes to develop-idp trigger production deployment via cd.yml
+- Environment variables (SUPABASE_URL, SUPABASE_ANON_KEY) are configured in Vercel
 
 
 ## Project Structure
