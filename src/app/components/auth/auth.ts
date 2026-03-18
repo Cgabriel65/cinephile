@@ -41,6 +41,7 @@ export class Auth {
       
       console.log('User logged in:', loggedUser);
       alert('Login successful! Check console for user data.');
+      this.router.navigate(['/dashboard']);
 
     } else {
       const newUser = await this.supabase.createUser(
