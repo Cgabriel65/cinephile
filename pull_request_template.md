@@ -10,6 +10,7 @@ Fixes # (issue)
 - [ ] Bug fix
 - [ ] New feature
 - [ ] Documentation update
+- [ ] Test
 
 ## How Has This Been Tested?
 Describe how you verified your changes, e.g., ran locally, Docker, or CI pipeline.
