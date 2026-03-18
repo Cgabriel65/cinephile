@@ -68,6 +68,8 @@ Deployment is automated with Vercel:
 - src/app/pipes – Custom pipes (minutesToHours)
 - src/styles.css – Global styles
 
+## Page URL
+https://cinephile-sage.vercel.app/auth
 
 Project developed for academic purposes.
 
